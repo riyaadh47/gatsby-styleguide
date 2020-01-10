@@ -1,0 +1,54 @@
+main {
+  &.container {
+    min-height: 100vh;
+    display: flex;
+  }
+  .content-wrapper {
+    width: 100%;
+    @include rem(padding, 0px 16px);
+    .page-name-container {
+      width: 100%;
+      max-width: 1280px;
+      @include rem(margin, 0 auto);
+      @include rem(padding, 35px 0px);
+      .page-name {
+        color: #008bce;
+        font-weight: 300;
+        @include font-size(65);
+        background: -webkit-linear-gradient(left,#00bbdc,#39207c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        line-height: 85px;
+        @include rem(margin-bottom, 20px);
+      }
+      .page-subtitle {
+        color: rgba($black, .5);
+        @include font-size(14);
+        line-height: 24px;
+        @include rem(margin, 0px);
+        @include rem(padding, 0px);
+      }
+    }
+  }
+  .internal-content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    @include rem(margin, 0 auto);
+    @include rem(padding, 32px);
+    border-radius: 20px;
+    min-height: 100px;
+    box-shadow: 0px 5px 3px 2px rgba(0,0,0,.03);
+    border: 1px solid rgba($darkBlue, .1);
+    .heading {
+      border: 1px solid rgba($darkBlue, .1);
+    }
+  }
+
+  .components-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    @include rem(margin, 0 auto);
+    @include rem(padding, 0px);
+  }
+}

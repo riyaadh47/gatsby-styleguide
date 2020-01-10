@@ -1,0 +1,29 @@
+$mb: 32px;
+
+h1, .h1 {
+	@include rem(margin, 0px 0px);
+}
+
+h2, .h2 {
+	@include rem(margin, 0px 0px);
+}
+
+h3, .h3 {
+	@include rem(margin, 0px 0px);
+}
+
+h4, .h4 {
+	@include rem(margin, 0px 0px);
+}
+
+h5, .h5 {
+	@include rem(margin, 0px 0px);
+}
+
+h6, .h6 {
+	@include rem(margin, 0px 0px);
+}
+
+p {
+	@include rem(margin, 0px 0px);
+}

@@ -1,0 +1,44 @@
+@import "style";
+
+.sidebar {
+	min-width: 240px;
+	border-right: 1px solid rgba($darkBlue, .1);
+}
+
+header {
+	display: block;
+	text-align: center;
+	@include rem(padding, 20px 20px);
+	border-bottom: 1px solid rgba($darkBlue, .1);
+	.title {
+		color: #008bce;
+		font-weight: 300;
+		@include font-size(35);
+	  background: -webkit-linear-gradient(left,#00bbdc,#39207c);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  display: inline-block;
+	}
+}
+
+.navigation {
+	@include rem(padding, 0px);
+	@include rem(margin, 0px);
+	li {
+		list-style: none;		
+		border-bottom: 1px solid rgba($darkBlue, .1);
+		.link {
+			display: block;
+			color: rgba($black, .7);
+			text-decoration: none;
+			@include transitioncustomSpeed(100ms);
+			background: $white;
+			@include rem(padding, 16px);
+			&:hover {
+				color: $white;
+				background-color: $lightBlue;
+				@include rem(padding, 16px 25px);
+			}
+		}
+	}
+}
