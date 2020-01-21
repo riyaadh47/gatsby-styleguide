@@ -1,29 +1,29 @@
 $mb: 32px;
 
 h1, .h1 {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }
 
 h2, .h2 {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }
 
 h3, .h3 {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }
 
 h4, .h4 {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }
 
 h5, .h5 {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }
 
 h6, .h6 {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }
 
 p {
-	@include rem(margin, 0px 0px);
+	@include rem(margin, 0px 0px $mb);
 }

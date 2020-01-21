@@ -3,7 +3,7 @@ import React from 'react'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from 'gatsby'
 
-import '../css/style.scss'
+import cardStyles from '../css/cards.module.scss'
 
 
 const Card = (props) => {
@@ -24,13 +24,13 @@ const data = useStaticQuery(graphql`
   }
 `);
 	
-	const {title, content, alignment} = props;
+	const {title, content} = props;
 	
 	return (
 
-		<div className={`card ${alignment}`}>
-			<h1 className="heading">{title}</h1>
-			<div className="content">
+		<div className={cardStyles.card}>
+			<h1 className={cardStyles.heading}>{title}</h1>
+			<div className={cardStyles.content}>
 				<p>{content}</p>
 			</div>
 			<Img fluid={data.image.childImageSharp.fluid} />

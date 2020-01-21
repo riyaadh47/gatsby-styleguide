@@ -7,28 +7,26 @@ main {
     width: 100%;
     @include rem(padding, 0px 16px);
     .page-name-container {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       max-width: 1280px;
       @include rem(margin, 0 auto);
       @include rem(padding, 35px 0px);
       .page-name {
-        color: #008bce;
         font-weight: 300;
         @include font-size(65);
-        background: -webkit-linear-gradient(left,#00bbdc,#39207c);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
         line-height: 85px;
         @include rem(margin-bottom, 20px);
       }
-      .page-subtitle {
-        color: rgba($black, .5);
-        @include font-size(14);
-        line-height: 24px;
-        @include rem(margin, 0px);
-        @include rem(padding, 0px);
-      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1280px;
+      @include rem(margin, 0 auto);
+      @include rem(padding, 0px 0px);
     }
   }
   .internal-content-wrapper {

@@ -1,23 +1,36 @@
 @import "style";
 
 .sidebar {
+	position: fixed;
 	min-width: 240px;
-	border-right: 1px solid rgba($darkBlue, .1);
+	height: 95vh;
+	overflow: hidden;
+	top: 0;
+	bottom: 0;
+	left: 20px;
+	margin: auto;
+	border: 1px solid rgba($darkBlue, .1);
+	@include boxShadow;
+	@include borderRadius;
 }
 
 header {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	@include rem(padding, 20px 20px);
 	border-bottom: 1px solid rgba($darkBlue, .1);
+	background: -webkit-linear-gradient(left,#00bbdc,#39207c);
 	.title {
-		color: #008bce;
+		color: $white;
 		font-weight: 300;
 		@include font-size(35);
-	  background: -webkit-linear-gradient(left,#00bbdc,#39207c);
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  display: inline-block;
+		//@include rem(margin-bottom, 5px);
+	}
+	.subtitle {
+		color: $black;
+		@include font-size(15);
 	}
 }
 
@@ -36,9 +49,12 @@ header {
 			@include rem(padding, 16px);
 			&:hover {
 				color: $white;
-				background-color: $lightBlue;
+				background: -webkit-linear-gradient(left,#00bbdc,#39207c);
 				@include rem(padding, 16px 25px);
 			}
 		}
+		//&:last-child {
+		//	border-bottom: none;
+		//}
 	}
 }

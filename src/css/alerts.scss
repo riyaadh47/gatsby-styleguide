@@ -1,0 +1,25 @@
+@import "style";
+
+.alert {
+	display: flex;
+	line-height: 22px;
+	@include boxShadow;
+	@include borderRadius;
+	@include font-size(13);
+	flex-direction: column;
+	color: rgba($darkBlue, 1);
+	@include rem(padding, 15px);
+	border: 1px solid $lightBlue;
+	@include rem(margin, 0px 0px 32px);
+	background-color: rgba($lightBlue, .2);
+	&.success {
+		color: $green;
+		border: 1px solid $green;
+		background-color: rgba($green, .2);
+	}
+	&.unsuccessful {
+		color: $orange;
+		border: 1px solid $orange;
+		background-color: rgba($orange, .2);
+	}
+}
