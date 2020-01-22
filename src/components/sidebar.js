@@ -2,8 +2,6 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { Scrollbars } from 'react-custom-scrollbars';
 
-import sidebarStyles from '../css/sidebar.module.scss'
-
 const Sidebar = () => {
 
 	const data = useStaticQuery(graphql`
@@ -33,17 +31,17 @@ const Sidebar = () => {
 
 	return (
 
-		<aside className={sidebarStyles.sidebar}>
-			<header className={sidebarStyles.header}>
-				<span className={sidebarStyles.title}>{data.site.siteMetadata.title}</span>
+		<aside className="sidebar">
+			<header className="header">
+				<span className="title">{data.site.siteMetadata.title}</span>
 			</header>
-			<Scrollbars autoHide style={{ height: '91%' }}>
-				<ul className={sidebarStyles.navigation}>
+			<Scrollbars autoHide autoHeight >
+				<ul className="navigation">
 					{data.allJavascriptFrontmatter.edges.map( (edge) => {
 						if (edge.node.frontmatter.type === "component") {
 							return (
 								<li key={edge.node.id}>
-									<Link to={`components/${edge.node.frontmatter.title.toLowerCase()}`} className={sidebarStyles.link}>{edge.node.frontmatter.title}</Link>
+									<Link to={`components/${edge.node.frontmatter.title.toLowerCase()}`} className="link">{edge.node.frontmatter.title}</Link>
 								</li>
 							)
 						} else {

@@ -8,6 +8,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Alert from '../../components/alert'
 import Layout from '../../components/layout'
 
+import '../../css/style.scss'
 
 export const frontmatter = {
 	title: "Alerts",
@@ -33,15 +34,16 @@ const codeString = `<Alert content='Alert 2' state="" />
 					
 					<section className="content">
 						
-						<Alert content='Alert  ' state="" />
-						<Alert content='Alert 2' state="success" />
-						<Alert content='Alert 3' state="unsuccessful" />
+						<Alert content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse blandit finibus ipsum, imperdiet auctor sem accumsan sit amet. Etiam gravida volutpat dapibus. Integer et nunc in augue fermentum aliquet non nec augue. Maecenas et nunc at mi aliquet rutrum. Integer porta orci odio. Vestibulum fringilla ultrices massa. Donec posuere augue lacinia imperdiet pellentesque.' state="" close />
+						
+						<Alert content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse blandit finibus ipsum, imperdiet auctor sem accumsan sit amet. Etiam gravida volutpat dapibus. Integer et nunc in augue fermentum aliquet non nec augue. Maecenas et nunc at mi aliquet rutrum. Integer porta orci odio. Vestibulum fringilla ultrices massa. Donec posuere augue lacinia imperdiet pellentesque.' state="success" close />
+						
+						<Alert content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse blandit finibus ipsum, imperdiet auctor sem accumsan sit amet. Etiam gravida volutpat dapibus. Integer et nunc in augue fermentum aliquet non nec augue. Maecenas et nunc at mi aliquet rutrum. Integer porta orci odio. Vestibulum fringilla ultrices massa. Donec posuere augue lacinia imperdiet pellentesque.' state="unsuccessful" close />
 
 
 						<SyntaxHighlighter language="javascript" style={docco}>
 				      {codeString}
 				    </SyntaxHighlighter>
-
 
 					</section>
 

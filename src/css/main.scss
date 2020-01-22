@@ -5,13 +5,13 @@ main {
   }
   .content-wrapper {
     width: 100%;
-    @include rem(padding, 0px 16px);
+    @include rem(padding, 0px 16px 0px 300px);
     .page-name-container {
       display: flex;
       flex-direction: column;
       width: 100%;
       max-width: 1280px;
-      @include rem(margin, 0 auto);
+      //@include rem(margin, 0 auto);
       @include rem(padding, 35px 0px);
       .page-name {
         font-weight: 300;
@@ -25,7 +25,7 @@ main {
       flex-direction: column;
       width: 100%;
       max-width: 1280px;
-      @include rem(margin, 0 auto);
+      //@include rem(margin, 0 auto);
       @include rem(padding, 0px 0px);
     }
   }

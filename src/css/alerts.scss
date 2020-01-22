@@ -1,25 +1,43 @@
-@import "style";
-
 .alert {
 	display: flex;
 	line-height: 22px;
 	@include boxShadow;
+	flex-direction: row;
+	align-items: center;
 	@include borderRadius;
 	@include font-size(13);
-	flex-direction: column;
-	color: rgba($darkBlue, 1);
+	color: $lightBlue;
 	@include rem(padding, 15px);
 	border: 1px solid $lightBlue;
+	justify-content: space-between;
 	@include rem(margin, 0px 0px 32px);
-	background-color: rgba($lightBlue, .2);
+	background-color: rgba($lightBlue, .1);
+	.close-alert {
+		color: $lightBlue;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		@include font-size(17);
+		background-color: transparent;
+	}
+	.alert-content {
+		flex: 1;
+		@include rem(margin-right, 15px);
+	}
 	&.success {
 		color: $green;
 		border: 1px solid $green;
-		background-color: rgba($green, .2);
+		background-color: rgba($green, .1);
+		.close-alert {
+			color: $green;
+		}
 	}
 	&.unsuccessful {
 		color: $orange;
 		border: 1px solid $orange;
-		background-color: rgba($orange, .2);
+		background-color: rgba($orange, .1);
+		.close-alert {
+			color: $orange;
+		}
 	}
 }

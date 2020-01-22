@@ -1,14 +1,19 @@
 import React from 'react'
 
-import '../css/alerts.scss'
+import '../css/style.scss'
 
 const Alert = (props) => {
 
-	const {content, state} = props;
+	const {content, state, close} = props;
 
 	return (
 
-		<span className={`alert ${state}`}>{content}</span>
+		<span className={`alert ${state}`}>
+			<span className="alert-content">{content}</span>
+			{close === true &&
+				<button className="close-alert">&times;</button>
+			}
+		</span>
 
 	)
 

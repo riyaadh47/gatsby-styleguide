@@ -1,0 +1,94 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	border: none;
+	max-width: 180px;
+	cursor: pointer;
+	outline: none;
+	@include rem(padding, 15px);
+	@include rem(margin, 0px 0px 15px 0px);
+	@include borderRadius;
+	@include transitionlin;
+	background-color: transparent;
+	border: 1px solid $default;
+	&:hover {
+		background-color: $default;
+	}
+
+	// Button Sizes
+	&.medium {
+		min-width: 200px;
+	}
+
+	&.large {
+		min-width: 220px;
+	}
+	
+	// Blue Button
+	&.blue-outline-button {
+		color: $darkBlue;
+		background-color: $white;
+		border: 1px solid $darkBlue;
+		&:hover {
+			background-color: rgba($darkBlue, .1);
+		}
+	}
+	
+	// Green Outline Button
+	&.green-outline-button {
+		color: $green;
+		background-color: $white;
+		border: 1px solid $green;
+		&:hover {
+			background-color: rgba($green, .1);
+		}
+	}
+
+	// Orange Outline Button
+	&.orange-outline-button {
+		color: $orange;
+		background-color: $white;
+		border: 1px solid $orange;
+		&:hover {
+			background-color: rgba($orange, .1);
+		}
+	}
+
+
+	// Blue Button
+	&.blue-solid-button {
+		color: $white;
+		background-color: $darkBlue;
+		border: none;
+		&:hover {
+			background-color: darken($darkBlue, 10%);
+		}
+	}
+	
+	// Green Outline Button
+	&.green-solid-button {
+		color: $white;
+		background-color: $green;
+		border: none;
+		&:hover {
+			background-color: darken($green, 10%);
+		}
+	}
+
+	// Orange Outline Button
+	&.orange-solid-button {
+		color: $white;
+		background-color: $orange;
+		border: none;
+		&:hover {
+			background-color: darken($orange, 10%);
+		}
+	}
+
+}
+
+.link {
+	color: $darkBlue;
+}
